@@ -16,3 +16,6 @@ build
 
 # version manager
 .tool-versions
+
+# Local Netlify folder
+.netlify
