@@ -1,2 +1,3 @@
-# shop
-Shop to order key duplicates from e.g. EMKA
+# Handelsvertretung KAH
+
+A webshop to order key duplicates from companies like EMKA.
