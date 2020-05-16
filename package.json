@@ -38,10 +38,10 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
     "snowpack": "^2.0.0-beta.21"
   },
   "webDependencies": {
