@@ -32,9 +32,11 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "clean": "rimraf dist && rimraf src/dist",
+    "clean": "rimraf dist && rimraf src/_output",
     "prepare": "snowpack",
-    "start": "snowpack dev",
+    "start": "run-s clean start:*",
+    "start:eleventy": "eleventy",
+    "start:snowpack": "snowpack dev",
     "build": "run-s clean build:*",
     "build:snowpack": "snowpack",
     "build:eleventy": "eleventy",
