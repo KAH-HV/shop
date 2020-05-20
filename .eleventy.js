@@ -1,6 +1,20 @@
+const { Liquid } = require('liquidjs');
+
+const liquidOptions = {
+  extname: '.liquid',
+  strict_filters: true,
+  root: ['_includes'],
+};
+
+const liquidEngine = new Liquid(liquidOptions);
+
+const fs = require('fs');
+
 module.exports = function (config) {
+  config.setLibrary('liquid', liquidEngine);
+
   // Layout aliases
-  config.addLayoutAlias('default', 'layouts/base.njk');
+  config.addLayoutAlias('default', 'layouts/base.liquid');
 
   // static assets to pass through
   config.addPassthroughCopy('./src/fonts');
@@ -29,5 +43,8 @@ module.exports = function (config) {
       output: "src/_output",
     },
     passthroughFileCopy: true,
+    templateFormats: ['md', 'liquid'],
+    htmlTemplateEngine: 'liquid',
+    markdownTemplateEngine: 'liquid',
   };
 };
