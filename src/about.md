@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 'Handelsvertretung KAH :: About'
 ---
 
 # About
